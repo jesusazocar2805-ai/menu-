@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+ background-color: #ffffff; /* Fundo branco */
+  color: #333333;           
+  padding-bottom: 50px;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://via.placeholder.com/1200x300') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #d4af37;
+  text-align: center;
+}
+
+.logo-circle {
+  border: 3px solid #d4af37;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.logo-circle h1 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.banner h2 {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+/* CATEGORIAS */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #111;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* CARDS DE PRODUTOS */
+.category-content {
+  display: none;
+}
+
+.category-content.active {
+  display: block;
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #95C1E6; /* Azul claro / celeste suave */
+  color: #000;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 1px solid #b3d1ff; /* Borde sutil para resaltar */
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card-info h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-info p {
+  font-size: 0.8rem;
+  color: #000000;
+  margin: 5px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-footer button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card-footer button:hover {
+  background-color: #a50000;
+}
+
+/* ABA SOBRE */
+.about-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+/* CHECKOUT */
+.checkout-section {
+  background: #151515;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.checkout-section h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-box {
+  background: #222;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.cart-box ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.cart-box li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.obs-box label, .sauce-option p {
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.obs-box textarea {
+  width: 100%;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+}
+
+.sauce-option {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+}
+
+.checkout-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.total-badge {
+  background: #222;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  border: 1px solid #444;
+}
+
+.pix-info {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 5px 0 15px 0;
+}
+
+.send-btn {
+  background-color: #008000;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: #00a000;
+}
+
+/* BANNER Y LOGO */
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://via.placeholder.com/1200x300') center/cover;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #d4af37;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilo para la imagen del logo circular */
+.logo-img {
+  width: 140px;          /* Ajusta el tamaño del logo según prefieras */
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;    /* Mantiene la forma circular */
+  border: 3px solid #d4af37; /* Borde dorado para mantener el estilo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner h2 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-top: 5px;
+}

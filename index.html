@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imperio Venezuelano Zabdy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BANNER / CABEÇALHO -->
+  <header class="banner">
+    <div class="logo-container">
+      <!-- Certifique-se de salvar sua imagem na mesma pasta com o nome logo.png -->
+     <img src="img/logo.jpeg" alt="Império Venezuelano Zabdi" class="logo-img">
+      <h2>NADA COMUM, ALGO DIFERENTE.</h2>
+    </div>
+  </header>
+
+  <!-- MENU DE NAVEGAÇÃO / CATEGORIAS -->
+  <nav class="categories">
+    <button class="tab-btn active" onclick="openCategory('salgados')">Salgados</button>
+    <button class="tab-btn" onclick="openCategory('combos')">Combos</button>
+    <button class="tab-btn" onclick="openCategory('bebidas')">Bebidas</button>
+    <button class="tab-btn" onclick="openCategory('doces')">Doces</button>
+    <button class="tab-btn" onclick="openCategory('sobre')">Sobre</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- SEÇÃO SALGADOS -->
+    <section id="salgados" class="category-content active">
+      <div class="grid-products">
+        
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQElc6YX2o01VjQBz7IqkfVQ_J-tC1vidpm6A11EsFQ&s=10" alt="Hamburguesa Sencilla">
+          <div class="card-info">
+            <h3>Hamburguesa Sencilla</h3>
+            <p>Carne 100g, presunto, queijo mussarela, batata palha, maionese, tomate e alface.</p>
+            <div class="card-footer">
+              <span class="price">R$ 28,00</span>
+              <button onclick="addToCart('Hamburguesa Sencilla', 28.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lJGZM2h7ABTA7Ep3dYYxn_1K7xxzyo0GX93AU6y0ZQ&s=10" alt="Hamburguesa Especial">
+          <div class="card-info">
+            <h3>Hamburguesa Especial</h3>
+            <p>Doble Carne 120g, bacon, Calabresa, presunto, queijo mussarela, batata palha, maionese, tomate e alface, Refrigerante 200ml.</p>
+            <div class="card-footer">
+              <span class="price">R$ 35,00</span>
+              <button onclick="addToCart('Hamburguesa Especial', 35.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://larepublica.cronosmedia.glr.pe/original/2023/07/29/64c5cf0a548af10b56689dde.jpg" alt="Salchipapa Tradicional">
+          <div class="card-info">
+            <h3>Salchipapa Tradicional</h3>
+            <p>Salsichas, Batata frita, Queijo ralado, maionese, ketchup.</p>
+            <div class="card-footer">
+              <span class="price">R$ 25,00</span>
+              <button onclick="addToCart('Salchipapa Tradicional', 25.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://thumbs.dreamstime.com/b/salchipapa-fries-caseras-con-ketchup-mustard-y-mayo-enclavados-en-el-plato-vista-vertical-superior-de-la-mesa-desde-arriba-404859958.jpg" alt="Salchipapa Especial">
+          <div class="card-info">
+            <h3>Salchipapa Especial</h3>
+            <p>Salsichas, Batata frita, Queijo ralado, maionese, ketchup, Calabresa, Frango, milho e Refrigerante de 200ml.</p>
+            <div class="card-footer">
+              <span class="price">R$ 35,00</span>
+              <button onclick="addToCart('Salchipapa Especial', 35.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO COMBOS -->
+    <section id="combos" class="category-content">
+      <div class="grid-products">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mgz21c4WS7x_8G9ks4GV4yK0vtazFaOZuNSZqTaayA&s=10" alt="Combo Family">
+          <div class="card-info">
+            <h3>Combo Family</h3>
+            <p>3 Refri Kuat 200mL + 1 X batata frita + 1 X salada natural + 3 maioneses.</p>
+            <div class="card-footer">
+              <span class="price">R$ 130,00</span>
+              <button onclick="addToCart('Combo Family', 130.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO BEBIDAS -->
+    <section id="bebidas" class="category-content">
+      <div class="grid-products">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFka_hNkSOTi2cWLW88m2c6Va9eA4Ag3bosN5pjBJm-w&s=10" alt="Coca-Cola 350ml">
+          <div class="card-info">
+            <h3>Coca-Cola 350ml</h3>
+            <p>Pra matar a sede.</p>
+            <div class="card-footer">
+              <span class="price">R$ 7,00</span>
+              <button onclick="addToCart('Coca-Cola 350ml', 7.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DOCES -->
+    <section id="doces" class="category-content">
+      <div class="grid-products">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRyC_ckcPIyQmoTdRF6a-ZD6yw5PQLCPOOOapS9wlpOA&s=10" alt="Torta 3 leite">
+          <div class="card-info">
+            <h3>Torta 3 leite</h3>
+            <p>Consulte os adicionais disponíveis pelo WhatsApp após finalizar seu pedido!</p>
+            <div class="card-footer">
+              <span class="price">R$ 25,00</span>
+              <button onclick="addToCart('Torta 3 leite', 25.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbQ7FAk27VBvRAVa9BAgu98rIgnYN6wyPDxukE8wvdXA&s=10" alt="Yogurt Natural">
+          <div class="card-info">
+            <h3>Yogurt Natural 500ml</h3>
+            <p>Consulte os sabores disponíveis pelo WhatsApp após finalizar seu pedido!</p>
+            <div class="card-footer">
+              <span class="price">R$ 30,00</span>
+              <button onclick="addToCart('Yogurt Natural 500ml', 30.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvAZ80qcAd_g4mwqjZi3p3jtleG2CEMrZKC94sM6EpQ&s=10" alt="Fresa con Crema">
+          <div class="card-info">
+            <h3>Fresa con Crema 400ml</h3>
+            <p>Consulte os sabores disponíveis pelo WhatsApp após finalizar seu pedido!</p>
+            <div class="card-footer">
+              <span class="price">R$ 30,00</span>
+              <button onclick="addToCart('Fresa con Crema 500ml', 30.00)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="category-content">
+      <div class="about-box">
+        <h3>Sobre o Imperio Venezuelano Zabdy</h3>
+        <p>Bem-vindo ao Imperio Venezuelano Zabdy! Trabalhamos com produtos selecionados da melhor qualidade para oferecer uma experiência única aos nossos clientes.</p>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO DE PEDIDO / CHECKOUT -->
+    <section class="checkout-section">
+      <h2>Confira seu pedido, adicione observações e digite o endereço</h2>
+      
+      <div class="checkout-grid">
+        <div class="cart-and-obs">
+          <div class="cart-box">
+            <h3>Itens Escolhidos:</h3>
+            <ul id="cart-items-list">
+              <li class="empty-msg">Nenhum item adicionado ainda.</li>
+            </ul>
+          </div>
+
+          <div class="obs-box">
+            <label for="obs">Adicione observações aqui:</label>
+            <textarea id="obs" rows="4" placeholder="Ex: Sem cebola, molho à parte..."></textarea>
+          </div>
+
+          <div class="sauce-option">
+            <p>Incluir molho verde e de alho?</p>
+            <label><input type="radio" name="saches" value="Sim" checked> Sim</label>
+            <label><input type="radio" name="saches" value="Não"> Não</label>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <input type="text" id="nome" placeholder="Seu nome" required>
+          <input type="text" id="telefone" placeholder="Telefone" required>
+          <input type="text" id="rua" placeholder="Rua" required>
+          <input type="text" id="numero" placeholder="Nº" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input type="text" id="bairro" placeholder="Bairro" required>
+          <input type="text" id="referencia" placeholder="Referência">
+          <input type="text" id="complemento" placeholder="Complemento">
+        </div>
+      </div>
+
+      <div class="checkout-footer">
+        <div class="total-badge">
+          Total a pagar: <strong>R$ <span id="total-price">0,00</span></strong>
+        </div>
+        <p class="pix-info">Frete e PIX informados no WhatsApp</p>
+        
+        <button class="send-btn" type="button" onclick="sendOrder(event)">Enviar Pedido</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
